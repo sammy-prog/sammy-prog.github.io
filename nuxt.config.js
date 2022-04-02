@@ -5,7 +5,7 @@ export default {
   ssr: false,
 
   // Target: https://go.nuxtjs.dev/config-target
-  mode: 'static',
+  target: 'static',
   router: {
     base: '/sammy-prog.github.io/'
   },
