@@ -3,8 +3,8 @@
     <div>
       <div class="custom__svg">
         <svg
-        data-aos="fade-up"
-        data-aos-duration="2000"
+          data-aos="fade-up"
+          data-aos-duration="2000"
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1200 120"
@@ -49,7 +49,14 @@
               >
             </div>
           </v-col>
-          <v-col cols="12" md="5" class="d-none d-md-block" data-aos="zoom-in" data-aos-duration="3000" data-aos-delay="250">
+          <v-col
+            cols="12"
+            md="5"
+            class="d-none d-md-block"
+            data-aos="zoom-in"
+            data-aos-duration="3000"
+            data-aos-delay="300"
+          >
             <div class="main">
               <div>
                 <img style="width: 40px; height: 40px" src="/vue.png" />
@@ -115,9 +122,21 @@
       fluid
     >
       <div class="widthmin mt-10">
-        <h1 style="text-align: center" data-aos="fade-down" data-aos-duration="1200">About Me</h1>
+        <h1
+          style="text-align: center"
+          data-aos="fade-down"
+          data-aos-duration="1200"
+        >
+          About Me
+        </h1>
         <v-row sty class="mt-8 align-center">
-          <v-col data-aos="fade-right" data-aos-duration="1200" cols="12" md="5" class="part">
+          <v-col
+            data-aos="fade-right"
+            data-aos-duration="1200"
+            cols="12"
+            md="5"
+            class="part"
+          >
             <img src="/profile.jpeg" alt="" />
           </v-col>
           <v-col cols="12" md="7" class="text-justify">
@@ -126,17 +145,24 @@
               class="pa-6"
             >
               <p>
-                I'm a software engineer specializing in web development using the MEVN stack. 
-                I have previously worked at a local startup which allowed me to get familiar with most stages of the software development process and learned to communicate well with clients and other team members.
-                 I've also done long-term contract work for clients using different web technologies. 
+                I'm a software engineer specializing in web development using
+                the MEVN stack. I have previously worked at a local startup
+                which allowed me to get familiar with most stages of the
+                software development process and learned to communicate well
+                with clients and other team members. I've also done long-term
+                contract work for clients using different web technologies.
               </p>
               <p>
-                I graduated from Addis Ababa Science and Technology University, during which I learned about software architecture, design patterns, writing proper documentation, and many more industry-related topics.
+                I graduated from Addis Ababa Science and Technology University,
+                during which I learned about software architecture, design
+                patterns, writing proper documentation, and many more
+                industry-related topics.
               </p>
               <h2>Skills</h2>
               <div class="d-inline-block mt-2" style="margin-left: -10px">
                 <v-chip
-                data-aos="zoom-in" data-aos-duration="1000" 
+                  data-aos="zoom-in"
+                  data-aos-duration="1000"
                   style="min-width: 100px; height: 40px"
                   class="mt-4 ml-3"
                   v-for="chip in chips"
@@ -159,9 +185,15 @@
       style="min-height: 100vh; background-color: #fff5eb"
       fluid
     >
-      <div class="widthmin">
-        <h1 data-aos="fade-right" data-aos-duration="1000" style="text-align: center">What I Do</h1>
-        <v-row class="justify-space-between mt-14 widthmin">
+      <div class="widthmin mt-10">
+        <h1
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          style="text-align: center"
+        >
+          What I Do
+        </h1>
+        <v-row class="justify-space-between mt-16 widthmin">
           <v-col v-for="how in howItWorks" :key="how.header" cols="12" md="3">
             <div
               data-aos="fade-down"
@@ -171,35 +203,174 @@
               <img :src="how.image" style="width: 52px; height: 62px" alt="" />
               <h2 class="mt-2" style="color: #212331">
                 <span
-                  style="color: #fea74c; margin-left: -40px; margin-right: 10px;"
+                  style="color: #fea74c; margin-left: -40px; margin-right: 10px"
                   >{{ how.headerNo }}</span
                 >{{ how.header }}
               </h2>
-              <p style="color: #212331;" class="mt-2">{{ how.text }}</p>
+              <p style="color: #212331" class="mt-2">{{ how.text }}</p>
             </div>
           </v-col>
         </v-row>
       </div>
     </v-container>
     <v-container
-      id="services"
-      style="min-height: 100vh; background-color: #fff"
+      id="portfolio"
+      style="min-height: 100vh; background-color: #fcfcfc"
       fluid
     >
+      <div class="widthmin mt-16 pb-10">
+        <h1
+          data-aos="fade-down"
+          data-aos-duration="1200"
+          style="text-align: center"
+        >
+          Portfolio
+        </h1>
+        <v-row class="justify-start mt-5">
+          <v-col
+            v-for="port in portfolio"
+            :key="port.title"
+            cols="12"
+            md="4"
+            sm="6"
+            class="mt-10"
+          >
+            <div style="width: 85%; margin: auto">
+              <v-card
+                style="
+                  border-top-left-radius: 320px;
+                  border-top-right-radius: 320px;
+                  height: 360px;
+                "
+              >
+                <div data-aos="flip-up" data-aos-duration="1400">
+                  <v-img
+                    class="portfolio__img"
+                    style="
+                      border-radius: 20px;
+                      box-shadow: 0px 0px 4px 2px #ddd;
+                    "
+                    height="180"
+                    :src="port.img"
+                  ></v-img>
+                </div>
+                <v-card-title class="mt-2">{{ port.title }}</v-card-title>
+                <v-card-text>
+                  {{ port.description }}
+                </v-card-text>
+                <v-card-actions v-if="port.link != ''" class="ml-2">
+                  <a target="_blank" :href="port.link"
+                    ><v-icon class="linkstyle">mdi-link</v-icon></a
+                  >
+                </v-card-actions>
+              </v-card>
+            </div>
+          </v-col>
+        </v-row>
+      </div></v-container
+    >
+
+    <v-container id="contact" fluid class="header__back mt-16">
+      <div class="custom-shape-divider-top-1648914438">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
       <div class="widthmin">
-        <h1 style="text-align: center">Portfolio</h1>
-      </div
-    ></v-container>
+        <h1 data-aos="fade-down"
+          data-aos-duration="1200" style="text-align: center" class="mt-10">Get in touch</h1>
+        <v-row class="mt-10" justify="center" data-aos="zoom-in"
+          data-aos-duration="1200">
+          <div>
+            <v-btn style="width: 280px; padding: 25px" class="mt-4"
+              ><v-icon style="color: #2b2d3d" class="mr-3">mdi-phone</v-icon
+              >+251966925486</v-btn
+            >
+          </div>
+          <div style="width: 100px"></div>
+          <div>
+            <a href="mailto:samuellegese98@gmail.com"
+              ><v-btn style="width: 280px; padding: 25px" class="text-none mt-4"
+                ><v-icon style="color: #2b2d3d" class="mr-3">mdi-email</v-icon
+                >samuellegese98@gmail.com</v-btn
+              ></a
+            >
+          </div>
+        </v-row>
+        <v-row class="mt-16" justify="center">
+          <a target="_blank" href="https://github.com/sammy-prog"><img class="contacts" src="/git.png" alt="" /></a>
+          <a target="_blank" href="https://www.linkedin.com/samuel-legese"><img class="contacts ml-3" src="/linked1.png" alt="" /></a>
+          <a target="_blank" href="https://www.instagram.com/sammy_prog/"><img class="contacts ml-3" src="/instaimg.png" alt="" /></a>
+          <a target="_blank" href="https://t.me/SteepDose"><img class="contacts ml-3" src="/tele5.png" alt="" /></a>
+        </v-row>
+      </div>
+    </v-container>
   </div>
 </template>
 
 <script>
-import aosMixin from '~/mixins/aos'
+import aosMixin from "~/mixins/aos";
 export default {
   name: "IndexPage",
   mixins: [aosMixin],
   data() {
     return {
+      portfolio: [
+        {
+          title: "OneStream",
+          description:
+            "Alternative deisgn for the popular multi-streaming platform.",
+          link: "https://onestream-sam.netlify.app/",
+          img: "/portfolio/screenshot (2).png",
+        },
+        {
+          title: "DiscoverOut",
+          description:
+            "landing page UI Built using the Sass framework and deployed on netlify.",
+          link: "https://discoverout.netlify.app/",
+          img: "/portfolio/screenshot (13).png",
+        },
+        {
+          title: "OneDash",
+          description: "Admin dashboard UI built using Vue and Vuetify.",
+          link: "https://onedashboard.netlify.app/",
+          img: "/portfolio/screenshot (10).png",
+        },
+        {
+          title: "QruQru",
+          description: "Digital art reviewer built using vue and Node.Js",
+          link: "",
+          img: "/portfolio/Screenshot (103).png",
+        },
+        {
+          title: "Ninjable",
+          description: "Web App that intends to gamify the entire HR process.",
+          link: "",
+          img: "/portfolio/ninjableportal.png",
+        },
+        {
+          title: "PDS",
+          description:
+            "paultry diagnostics system is an electron app designed to provide faster diagnosis of paultry diseases.",
+          link: "",
+          img: "/portfolio/1.png",
+        },
+        // {
+        //   title: "Ninjable/Admin",
+        //   description:
+        //     "Admin for Web App that intends to gamify the entire HR process.",
+        //   link: "",
+        //   img: "/portfolio/Integrations.png",
+        // },
+      ],
       howItWorks: [
         {
           image: "figma.png",
@@ -265,6 +436,10 @@ export default {
           image: "/hasura.webp",
         },
         {
+          name: "Electron",
+          image: "/electron.png",
+        },
+        {
           name: "Rest",
           image: "/rest.webp",
         },
@@ -284,7 +459,6 @@ export default {
           name: "MySql",
           image: "/mysql.png",
         },
-        
       ],
     };
   },
@@ -384,6 +558,49 @@ a {
   border-radius: 20px;
   width: 410px;
   height: 420px;
+}
+.portfolio__img {
+  transform: scale(1.01) rotate(-4.5deg);
+  transform-origin: 65% 75%;
+  transition: transform 1s, filter 0.1s ease;
+}
+.portfolio__img:hover {
+  transform: scale(1) rotate(0deg);
+}
+.header__back {
+  position: relative;
+  color: white;
+  background: linear-gradient(146deg, #2b2d3d 13%, #000000 93%) !important;
+  min-height: 50vh;
+}
+.custom-shape-divider-top-1648914438 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1648914438 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 120px;
+}
+
+.custom-shape-divider-top-1648914438 .shape-fill {
+  fill: #ffffff;
+}
+.linkstyle:hover {
+  color: #2b2d3d;
+}
+.contacts {
+  border-radius: 50%;
+  border: 1px solid white;
+  padding: 10px;
+  height: 50px;
+  width: 50px;
 }
 @media only screen and (max-width: 700px) {
   .part img {
