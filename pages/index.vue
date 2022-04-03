@@ -59,48 +59,48 @@
           >
             <div class="main">
               <div>
-                <img style="width: 40px; height: 40px" src="vue.png" />
+                <img style="width: 40px; height: 40px" src="/vue.png" />
               </div>
               <div>
                 <img
                   class="item"
                   style="animation-delay: 0s; width: 40px; height: 35px"
-                  src="boot.png"
+                  src="/boot.png"
                 />
               </div>
               <div>
                 <img
                   class="item"
                   style="animation-delay: -1s; width: 80px; height: 45px"
-                  src="js.png"
+                  src="/js.png"
                 />
               </div>
               <div>
                 <img
                   class="item"
                   style="animation-delay: -2s; width: 40px; height: 35px"
-                  src="nuxt.png"
+                  src="/nuxt.png"
                 />
               </div>
               <div>
                 <img
                   class="item"
                   style="animation-delay: -3s; width: 40px; height: 40px"
-                  src="vuetify-logo.png"
+                  src="/vuetify-logo.png"
                 />
               </div>
               <div>
                 <img
                   class="item"
                   style="animation-delay: -4s; width: 50px; height: 40px"
-                  src="sass.png"
+                  src="/sass.png"
                 />
               </div>
               <div>
                 <img
                   class="item"
                   style="animation-delay: -5s; width: 40px; height: 40px"
-                  src="css.png"
+                  src="/css.png"
                 />
               </div>
 
@@ -108,7 +108,7 @@
                 <img
                   class="item"
                   style="animation-delay: -6s; width: 40px; height: 40px"
-                  src="html5.png"
+                  src="/html5.png"
                 />
               </div>
             </div>
@@ -137,7 +137,7 @@
             md="5"
             class="part"
           >
-            <img src="profile.jpeg" alt="" />
+            <img src="/profile.jpeg" alt="" />
           </v-col>
           <v-col cols="12" md="7" class="text-justify">
             <div
@@ -306,10 +306,10 @@
           </div>
         </v-row>
         <v-row class="mt-16" justify="center">
-          <a target="_blank" href="https://github.com/sammy-prog"><img class="contacts" src="git.png" alt="" /></a>
-          <a target="_blank" href="https://www.linkedin.com/samuel-legese"><img class="contacts ml-3" src="linked1.png" alt="" /></a>
-          <a target="_blank" href="https://www.instagram.com/sammy_prog/"><img class="contacts ml-3" src="instaimg.png" alt="" /></a>
-          <a target="_blank" href="https://t.me/SteepDose"><img class="contacts ml-3" src="tele5.png" alt="" /></a>
+          <a target="_blank" href="https://github.com/sammy-prog"><img class="contacts" src="/git.png" alt="" /></a>
+          <a target="_blank" href="https://www.linkedin.com/samuel-legese"><img class="contacts ml-3" src="/linked1.png" alt="" /></a>
+          <a target="_blank" href="https://www.instagram.com/sammy_prog/"><img class="contacts ml-3" src="/instaimg.png" alt="" /></a>
+          <a target="_blank" href="https://t.me/SteepDose"><img class="contacts ml-3" src="/tele5.png" alt="" /></a>
         </v-row>
       </div>
     </v-container>
@@ -329,39 +329,39 @@ export default {
           description:
             "Alternative deisgn for the popular multi-streaming platform.",
           link: "https://onestream-sam.netlify.app/",
-          img: "portfolio/screenshot (2).png",
+          img: "/portfolio/screenshot (2).png",
         },
         {
           title: "DiscoverOut",
           description:
             "landing page UI Built using the Sass framework and deployed on netlify.",
           link: "https://discoverout.netlify.app/",
-          img: "portfolio/screenshot (13).png",
+          img: "/portfolio/screenshot (13).png",
         },
         {
           title: "OneDash",
           description: "Admin dashboard UI built using Vue and Vuetify.",
           link: "https://onedashboard.netlify.app/",
-          img: "portfolio/screenshot (10).png",
+          img: "/portfolio/screenshot (10).png",
         },
         {
           title: "QruQru",
           description: "Digital art reviewer built using vue and Node.Js",
           link: "",
-          img: "portfolio/Screenshot (103).png",
+          img: "/portfolio/Screenshot (103).png",
         },
         {
           title: "Ninjable",
           description: "Web App that intends to gamify the entire HR process.",
           link: "",
-          img: "portfolio/ninjableportal.png",
+          img: "/portfolio/ninjableportal.png",
         },
         {
           title: "PDS",
           description:
             "paultry diagnostics system is an electron app designed to provide faster diagnosis of paultry diseases.",
           link: "",
-          img: "portfolio/1.png",
+          img: "/portfolio/1.png",
         },
         // {
         //   title: "Ninjable/Admin",
@@ -373,21 +373,21 @@ export default {
       ],
       howItWorks: [
         {
-          image: "figma.png",
+          image: "/figma.png",
           header: "Convert Mockups",
           headerNo: "01",
           text: "Convert UI mockups from sources like Figma and Adobe xd to working pages using various tech stacks.",
           duration: "1200",
         },
         {
-          image: "vue.png",
+          image: "/vue.png",
           header: "Build Web Apps",
           headerNo: "02",
           text: "Develop fullly functional websites using the Vue.Js ecosystem, along with Node.js, Express and Mongodb.",
           duration: "1700",
         },
         {
-          image: "graph.png",
+          image: "/graph.png",
           header: "API Development",
           headerNo: "03",
           text: "Implement common APIs based on architecture guidelines and frameworks using graphql or RESTFUL services.",
@@ -397,67 +397,67 @@ export default {
       chips: [
         {
           name: "HTML5",
-          image: "html5.png",
+          image: "/html5.png",
         },
         {
           name: "CSS3",
-          image: "css.png",
+          image: "/css.png",
         },
         {
           name: "JavaScript",
-          image: "js.png",
+          image: "/js.png",
         },
         {
           name: "Vue.Js",
-          image: "vue.png",
+          image: "/vue.png",
         },
         {
           name: "Vuetify.Js",
-          image: "vuetify-logo.png",
+          image: "/vuetify-logo.png",
         },
         {
           name: "Nuxt.Js",
-          image: "nuxt.png",
+          image: "/nuxt.png",
         },
         {
           name: "BootStrap",
-          image: "boot.png",
+          image: "/boot.png",
         },
         {
           name: "Sass",
-          image: "sass.png",
+          image: "/sass.png",
         },
         {
           name: "Node.Js",
-          image: "node.webp",
+          image: "/node.webp",
         },
         {
           name: "Hasura",
-          image: "hasura.webp",
+          image: "/hasura.webp",
         },
         {
           name: "Electron",
-          image: "electron.png",
+          image: "/electron.png",
         },
         {
           name: "Rest",
-          image: "rest.webp",
+          image: "/rest.webp",
         },
         {
           name: "GraphQL",
-          image: "graph.png",
+          image: "/graph.png",
         },
         {
           name: "Docker",
-          image: "Moby-logo.webp",
+          image: "/Moby-logo.webp",
         },
         {
           name: "MongoDB",
-          image: "mongo.webp",
+          image: "/mongo.webp",
         },
         {
           name: "MySql",
-          image: "mysql.png",
+          image: "/mysql.png",
         },
       ],
     };

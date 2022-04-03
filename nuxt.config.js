@@ -6,9 +6,9 @@ export default {
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-  router: {
-    base: '/sammy-prog.github.io/'
-  },
+  // router: {
+  //   base: '/sammy-prog.github.io/'
+  // },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: 'Samuel Bekele',
